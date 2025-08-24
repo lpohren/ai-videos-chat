@@ -1,6 +1,6 @@
-# Base Project Template
+# Let Me Ask App
 
-A modern full-stack application template with real-time capabilities, ready to be customized for various projects.
+Another AI chat, this time using data from recorded videos.
 
 ## 🚀 Technologies
 
@@ -11,6 +11,7 @@ A modern full-stack application template with real-time capabilities, ready to b
 - **PostgreSQL** - Relational database
 - **Zod** - Schema validation
 - **TypeScript** - Programming language
+- **Docker** - Containerization
 
 ### Frontend
 
@@ -19,20 +20,18 @@ A modern full-stack application template with real-time capabilities, ready to b
 - **Tailwind CSS** - Utility-first CSS framework
 - **React Router** - Routing for React
 - **TanStack Query** - Server state management
-- **Radix UI** - Accessible components
+- **shadcn/ui** - Re-usable components built with Radix UI and Tailwind CSS
 
 ### Tools
 
 - **Biome** - Linter and formatter
-- **Docker** - Containerization
 - **Yarn Workspaces** - Monorepo management
 
 ## 📁 Project Structure
 
 ```
-├── server/          # Backend API
+├── server/         # Backend API
 ├── web/            # Frontend React
-├── docker/         # Docker configurations
 └── package.json    # Workspace root
 ```
 
@@ -46,14 +45,7 @@ A modern full-stack application template with real-time capabilities, ready to b
 
 ### Installation
 
-1. **Clone the repository**
-
-```bash
-git clone <repository-url>
-cd let-me-ask
-```
-
-2. **Install dependencies**
+1. **Install dependencies**
 
 ```bash
 yarn install
@@ -61,13 +53,13 @@ yarn install
 
 ### Server Setup
 
-3. **Navigate to server directory**
+2. **Navigate to server directory**
 
 ```bash
 cd server
 ```
 
-4. **Configure environment variables**
+3. **Configure environment variables**
 
 ```bash
 cp .env.example .env
@@ -80,13 +72,13 @@ PORT=3333
 DATABASE_URL=postgresql://docker:docker@localhost:5432/agents
 ```
 
-5. **Start the database**
+4. **Start the database**
 
 ```bash
 docker-compose up -d
 ```
 
-6. **Run migrations**
+5. **Run migrations**
 
 ```bash
 yarn db:seed
