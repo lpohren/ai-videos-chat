@@ -1,11 +1,13 @@
+import { Link } from 'react-router-dom'
+
 const CreateRoom = () => {
   return (
     <div>
       <h1>Create Room</h1>
 
-      <a className="underline" href="/room">
+      <Link className="underline" to="/room">
         Access Room
-      </a>
+      </Link>
     </div>
   )
 }
